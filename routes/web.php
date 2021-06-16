@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });*/
+Auth::routes(['verify'=> true]);
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
@@ -34,7 +35,6 @@ Route::get('/users/{id}', function ($id) {
 });
 
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
